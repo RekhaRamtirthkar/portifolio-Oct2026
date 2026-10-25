@@ -38,7 +38,7 @@ section:nth-of-type(even){background:var(--alt)}
 .title h2::after{content:'';position:absolute;left:0;bottom:0;width:50px;height:3px;background:var(--accent)}
 .title p{color:var(--muted);margin-top:10px}
 /* hero */
-#home{min-height:100vh;padding:0;position:relative;display:flex;align-items:center;color:#fff;background:#000 url(images/profile.jpg) center/cover}
+#home{min-height:100vh;padding:0;position:relative;display:flex;align-items:center;color:#fff;background:#000 url(profile.jpg) center/cover}
 #home::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,11,20,.78),rgba(4,11,20,.25))}
 #home .wrap{position:relative}
 #home h2{font-size:clamp(40px,7vw,64px);font-weight:700}
@@ -109,6 +109,24 @@ form{text-align:left}.send{text-align:center}
 footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);background:var(--bg)}
 #top{position:fixed;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;border:0;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:40}
 #top.on{opacity:1;pointer-events:auto}
+
+/* portfolio v2 */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{border:1px solid var(--line);background:var(--card);color:var(--text);padding:7px 16px;border-radius:50px;font:600 13px 'Raleway',sans-serif;cursor:pointer;transition:.3s}
+.filters button.on,.filters button:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.card{aspect-ratio:4/3}
+.card.shot img{object-fit:contain;object-position:top;background:#fff}
+.card .tag{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:50px}
+.sub{font-size:22px;margin:46px 0 6px}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:18px}
+.case{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:8px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,.05)}
+.case small{color:var(--accent);font:700 12px 'Raleway',sans-serif;letter-spacing:.5px}
+.case h4{font-size:19px;margin:6px 0 10px;color:var(--text)}
+.case img{width:100%;border-radius:6px;border:1px solid var(--line);cursor:zoom-in;margin-bottom:12px}
+.case p{font-size:14px;color:var(--muted);margin-bottom:14px}
+.m{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid var(--line);padding-top:12px;text-align:left}
+.m b{display:block;font:700 16px 'Raleway',sans-serif;color:var(--text)}.m span{font-size:11px;color:var(--muted)}
+@media(max-width:560px){.m{grid-template-columns:1fr 1fr}}
 @media(max-width:1000px){
  #sidebar{transform:translateX(-100%)}#sidebar.open{transform:none}
  #toggle{display:block}main{margin-left:0}
@@ -122,7 +140,7 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
 <button id="toggle" aria-label="Menu"><i class="bi bi-list"></i></button>
 
 <aside id="sidebar">
-  <img class="avatar" src="images/profile.jpg" alt="Rekha">
+  <img class="avatar" src="profile.jpg" alt="Rekha">
   <h1>Rekha</h1>
   <div class="social">
     <a href="https://linkedin.com/in/rekha-ramtirthkar" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -154,7 +172,7 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
   <div class="wrap">
     <div class="title"><h2>About</h2><p>Website Development &amp; Digital Marketing Executive based in Bengaluru.</p></div>
     <div class="about">
-      <img src="images/portfolio-1.jpg" alt="Rekha">
+      <img src="portfolio-1.jpg" alt="Rekha">
       <div>
         <h3>Website Developer &amp; Digital Marketer.</h3>
         <p class="it">WordPress · SEO · AEO · GEO · Google Ads · Meta Ads · Power BI</p>
@@ -222,15 +240,22 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
 
 <section id="portfolio">
   <div class="wrap">
-    <div class="title"><h2>Portfolio</h2><p>Photos and project screenshots. Click any image to enlarge.</p></div>
-    <div class="grid">
-      <div class="card"><img src="images/portfolio-1.jpg" alt="Rekha" loading="lazy"><div class="cap"><b>Rekha</b>Bengaluru</div></div>
-      <!-- Add more images: put files in /images named portfolio-2.jpg ... portfolio-9.jpg. Missing ones hide automatically. -->
-      <div class="card"><img src="images/portfolio-2.jpg" alt="Project 2" loading="lazy"><div class="cap"><b>Project 2</b>Add a short description</div></div>
-      <div class="card"><img src="images/portfolio-3.jpg" alt="Project 3" loading="lazy"><div class="cap"><b>Project 3</b>Add a short description</div></div>
-      <div class="card"><img src="images/portfolio-4.jpg" alt="Project 4" loading="lazy"><div class="cap"><b>Project 4</b>Add a short description</div></div>
-      <div class="card"><img src="images/portfolio-5.jpg" alt="Project 5" loading="lazy"><div class="cap"><b>Project 5</b>Add a short description</div></div>
-      <div class="card"><img src="images/portfolio-6.jpg" alt="Project 6" loading="lazy"><div class="cap"><b>Project 6</b>Add a short description</div></div>
+    <div class="title"><h2>Portfolio</h2><p>Campaign results, screenshots and work samples. Click any image to enlarge.</p></div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="gallery"></div>
+
+    <h3 class="sub">Featured Case Studies</h3>
+    <p style="color:var(--muted);font-size:14px">Meta Ads lead-generation results from Ads Manager (Bengaluru audience, lead forms).</p>
+    <div class="cases">
+      <div class="case"><small>01 | META ADS | AUGUST 2026</small><h4>Lead Generation Campaigns</h4><img src="meta-ads-aug.jpg" alt="Meta Ads August 2026" loading="lazy">
+        <p>Four lead-form campaigns delivered 1,996 leads; the best campaigns ran at about ₹42 per lead.</p>
+        <div class="m"><div><b>1,996</b><span>Leads</span></div><div><b>₹61.61</b><span>Avg CPL</span></div><div><b>₹1.23L</b><span>Spend</span></div><div><b>13.4L</b><span>Impressions</span></div></div></div>
+      <div class="case"><small>02 | META ADS | SEPTEMBER 2026</small><h4>Scaling Lead Volume</h4><img src="meta-ads-sep.jpg" alt="Meta Ads September 2026" loading="lazy">
+        <p>Scaled spend and delivered the highest monthly volume with 2,226 leads and 5.3 lakh accounts reached.</p>
+        <div class="m"><div><b>2,226</b><span>Leads</span></div><div><b>₹68.00</b><span>Avg CPL</span></div><div><b>₹1.51L</b><span>Spend</span></div><div><b>17.1L</b><span>Impressions</span></div></div></div>
+      <div class="case"><small>03 | META ADS | 1–16 OCTOBER 2026</small><h4>Ongoing Optimisation</h4><img src="meta-ads-oct.jpg" alt="Meta Ads October 2026" loading="lazy">
+        <p>838 leads in the first 16 days of October while testing audiences and creatives.</p>
+        <div class="m"><div><b>838</b><span>Leads</span></div><div><b>₹88.44</b><span>Avg CPL</span></div><div><b>₹74K</b><span>Spend</span></div><div><b>8.0L</b><span>Impressions</span></div></div></div>
     </div>
   </div>
 </section>
@@ -298,9 +323,40 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
  if(e.target.id==='about')$$('[data-n]').forEach(el=>{const n=+el.dataset.n;let i=0;const k=setInterval(()=>{el.textContent=++i;if(i>=n)clearInterval(k)},120)});
  io.unobserve(e.target)}),{threshold:.25});
 ['#about','#skills'].forEach(s=>io.observe($(s)));
-// hide missing portfolio images, lightbox
-$$('.card img').forEach(i=>i.onerror=()=>i.closest('.card').remove());
-$$('.card').forEach(c=>c.onclick=()=>{$('#lb img').src=c.querySelector('img').src;$('#lb').classList.add('on')});
+// portfolio gallery: add a line here for every new image (file, category, title, caption)
+const items=[
+['meta-ads-aug.jpg','Meta Ads','Meta Ads – August 2026','1,996 leads at ₹61.61 per lead',1],
+['meta-ads-sep.jpg','Meta Ads','Meta Ads – September 2026','2,226 leads, 17L impressions',1],
+['meta-ads-oct.jpg','Meta Ads','Meta Ads – October 2026','838 leads in 16 days',1],
+['meta-audience.jpg','Meta Ads','Audience Targeting','Bengaluru location targeting, 6.5–7.6M audience',1],
+['lead-form-1.jpg','Lead Forms','Lead Form Responses','Qualifying questions (contact details hidden)',1],
+['lead-form-2.jpg','Lead Forms','Lead Form Responses','Plot-size lead form (contact details hidden)',1],
+['google-ads-1.jpg','Google Ads','Google Ads Campaign','Add a short description'],
+['google-ads-2.jpg','Google Ads','Google Ads Results','Add a short description'],
+['google-ads-3.jpg','Google Ads','Google Ads Performance','Add a short description'],
+['gmb-1.jpg','GMB Profile','Google Business Profile','Add a short description'],
+['gmb-2.jpg','GMB Profile','GMB Insights','Add a short description'],
+['website-1.jpg','Websites','Website Project','Add a short description'],
+['website-2.jpg','Websites','Website Project','Add a short description'],
+['seo-1.jpg','SEO & Analytics','SEO Rankings','Add a short description'],
+['analytics-1.jpg','SEO & Analytics','Analytics / Search Console','Add a short description'],
+['powerbi-1.jpg','Power BI','Power BI Dashboard','Add a short description'],
+['linkedin-ads-1.jpg','LinkedIn & YouTube','LinkedIn / YouTube Ads','Add a short description'],
+['portfolio-1.jpg','Photos','Rekha','Bengaluru']
+];
+const g=$('#gallery'),fl=$('#filters');
+items.forEach(([f,cat,t,cap,shot])=>{const d=document.createElement('div');d.className='card'+(cat==='Photos'?'':' shot');d.dataset.cat=cat;
+ d.innerHTML=`<img src="${f}" alt="${t}" loading="lazy"><span class="tag">${cat}</span><div class="cap"><b>${t}</b>${cap}</div>`;
+ const im=d.querySelector('img');im.onerror=()=>{if(!im.dataset.r){im.dataset.r=1;im.src='images/'+f}else d.remove();buildFilters()};
+ d.onclick=()=>{$('#lb img').src=im.src;$('#lb').classList.add('on')};g.append(d)});
+let cur='All';
+function buildFilters(){const cats=['All',...new Set($$('#gallery .card').map(c=>c.dataset.cat))];
+ fl.innerHTML='';cats.forEach(c=>{const b=document.createElement('button');b.textContent=c;b.className=c===cur?'on':'';
+  b.onclick=()=>{cur=c;$$('#gallery .card').forEach(x=>x.style.display=(c==='All'||x.dataset.cat===c)?'':'none');buildFilters()};fl.append(b)})}
+buildFilters();
+$$('.case img').forEach(i=>i.onclick=()=>{$('#lb img').src=i.src;$('#lb').classList.add('on')});
+// fallback if images are inside an /images folder
+$$('img.avatar,.about img').forEach(i=>i.onerror=()=>{if(!i.dataset.r){i.dataset.r=1;i.src='images/'+i.getAttribute('src')}});
 $('#lb').onclick=()=>$('#lb').classList.remove('on');
 // contact form -> opens email client
 $('#form').onsubmit=e=>{e.preventDefault();
