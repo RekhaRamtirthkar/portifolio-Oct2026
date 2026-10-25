@@ -145,6 +145,7 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
   <div class="social">
     <a href="https://linkedin.com/in/rekha-ramtirthkar" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
     <a href="mailto:rekharamtirthkar@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+    <a href="https://wa.me/919164465721" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
     <a href="tel:+919164465721" aria-label="Call"><i class="bi bi-telephone-fill"></i></a>
   </div>
   <nav>
@@ -288,7 +289,7 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
         <div class="row2"><div><label for="n">Your Name</label><input id="n" required></div><div><label for="e">Your Email</label><input id="e" type="email" required></div></div>
         <label for="s">Subject</label><input id="s" required>
         <label for="m">Message</label><textarea id="m" rows="6" required></textarea>
-        <div class="send"><button class="btn" type="submit"><i class="bi bi-send"></i>Send Message</button></div>
+        <div class="send"><button class="btn" type="submit"><i class="bi bi-whatsapp"></i>Send via WhatsApp</button></div>
       </form>
     </div>
   </div>
@@ -358,10 +359,10 @@ $$('.case img').forEach(i=>i.onclick=()=>{$('#lb img').src=i.src;$('#lb').classL
 // fallback if images are inside an /images folder
 $$('img.avatar,.about img').forEach(i=>i.onerror=()=>{if(!i.dataset.r){i.dataset.r=1;i.src='images/'+i.getAttribute('src')}});
 $('#lb').onclick=()=>$('#lb').classList.remove('on');
-// contact form -> opens email client
+// contact form -> opens WhatsApp chat with the message pre-filled
 $('#form').onsubmit=e=>{e.preventDefault();
- const b=`Name: ${$('#n').value}\nEmail: ${$('#e').value}\n\n${$('#m').value}`;
- location.href=`mailto:rekharamtirthkar@gmail.com?subject=${encodeURIComponent($('#s').value)}&body=${encodeURIComponent(b)}`};
+ const t=`*New message from your portfolio*\nName: ${$('#n').value}\nEmail: ${$('#e').value}\nSubject: ${$('#s').value}\n\n${$('#m').value}`;
+ window.open('https://wa.me/919164465721?text='+encodeURIComponent(t),'_blank')};
 </script>
 </body>
 </html>
