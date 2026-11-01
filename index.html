@@ -114,9 +114,9 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
 #top.on{opacity:1;pointer-events:auto}
 
 /* portfolio v2 */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.filters button{border:1px solid var(--line);background:var(--card);color:var(--text);padding:7px 16px;border-radius:50px;font:600 13px 'Raleway',sans-serif;cursor:pointer;transition:.3s}
-.filters button.on,.filters button:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 26px;margin:0 0 30px}
+.filters button{border:0;border-bottom:2px solid transparent;background:none;color:var(--text);padding:6px 2px;font:600 13px 'Raleway',sans-serif;letter-spacing:.6px;text-transform:uppercase;cursor:pointer;transition:.25s}
+.filters button.on,.filters button:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .card{aspect-ratio:4/3}
 .card.shot{aspect-ratio:16/10}.card.shot .cap{font-size:12px;padding:10px 12px}.card.shot .cap b{font-size:13px}
 .card.shot img{object-fit:contain;object-position:top;background:#fff}
@@ -215,7 +215,7 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
       <div class="bar"><div class="label"><span>Power BI, SQL &amp; Data Analysis</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
       <div class="bar"><div class="label"><span>Canva / Adobe / CapCut / VN</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
       <div class="bar"><div class="label"><span>Moodle LMS on AWS &amp; Zoho tools</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
-      <div class="bar"><div class="label"><span>AWS &amp; GoDaddy  &amp; Hostinger Hosting</span><span>90%</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
+      <div class="bar"><div class="label"><span>Hostinger &amp; GoDaddy Hosting</span><span>90%</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
       <div class="bar"><div class="label"><span>Wix &amp; Webflow Website Development</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
       <div class="bar"><div class="label"><span>ERP Software Setup &amp; Maintenance</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
       <div class="bar"><div class="label"><span>HR: Onboarding, Candidates &amp; Technical Rounds</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
@@ -443,24 +443,70 @@ const items=[
 ['audit-2.jpg','Website Audit','GTmetrix Performance Report','Grade C, 68% performance, 85% structure, LCP 1.4s'],
 ['audit-1.jpg','Website Audit','Website Authority Check','1 Jul 2026: Domain Authority 8, 71 backlinks'],
 ['audit-3.jpg','Website Audit','Hostinger Page Speed Test','31 Jul 2026: mobile performance score diagnosed for improvement'],
-['instagram-1.jpg','Social Media','Instagram Profile','8,202 followers and 416 posts'],
-['website-1.jpg','Websites','Website Project','Add a short description'],
-['website-2.jpg','Websites','Website Project','Add a short description'],
+['instagram-1.jpg','Instagram','Instagram Profile','8,202 followers and 416 posts'],
+['website-1.jpg','Website','Website Project','Add a short description'],
+['website-2.jpg','Website','Website Project','Add a short description'],
+['website-3.jpg','Website','Website Project','Add a short description'],
+['website-4.jpg','Website','Website Project','Add a short description'],
+['website-5.jpg','Website','Website Project','Add a short description'],
+['website-6.jpg','Website','Website Project','Add a short description'],
+['website-7.jpg','Website','Website Project','Add a short description'],
+['website-8.jpg','Website','Website Project','Add a short description'],
+['instagram-2.jpg','Instagram','Instagram','Add a short description'],
+['instagram-3.jpg','Instagram','Instagram','Add a short description'],
+['instagram-4.jpg','Instagram','Instagram','Add a short description'],
+['instagram-5.jpg','Instagram','Instagram','Add a short description'],
+['instagram-6.jpg','Instagram','Instagram','Add a short description'],
+['youtube-1.jpg','YouTube','YouTube','Add a short description'],
+['youtube-2.jpg','YouTube','YouTube','Add a short description'],
+['youtube-3.jpg','YouTube','YouTube','Add a short description'],
+['youtube-4.jpg','YouTube','YouTube','Add a short description'],
+['facebook-1.jpg','Facebook','Facebook','Add a short description'],
+['facebook-2.jpg','Facebook','Facebook','Add a short description'],
+['facebook-3.jpg','Facebook','Facebook','Add a short description'],
+['facebook-4.jpg','Facebook','Facebook','Add a short description'],
+['creative-1.jpg','Creatives','Creative Design','Add a short description'],
+['creative-2.jpg','Creatives','Creative Design','Add a short description'],
+['creative-3.jpg','Creatives','Creative Design','Add a short description'],
+['creative-4.jpg','Creatives','Creative Design','Add a short description'],
+['creative-5.jpg','Creatives','Creative Design','Add a short description'],
+['creative-6.jpg','Creatives','Creative Design','Add a short description'],
+['creative-7.jpg','Creatives','Creative Design','Add a short description'],
+['creative-8.jpg','Creatives','Creative Design','Add a short description'],
+['creative-9.jpg','Creatives','Creative Design','Add a short description'],
+['creative-10.jpg','Creatives','Creative Design','Add a short description'],
+['creative-11.jpg','Creatives','Creative Design','Add a short description'],
+['creative-12.jpg','Creatives','Creative Design','Add a short description'],
 ['powerbi-1.jpg','Power BI','Power BI Dashboard','Add a short description'],
-['linkedin-ads-1.jpg','LinkedIn & YouTube','LinkedIn / YouTube Ads','Add a short description'],
+['powerbi-2.jpg','Power BI','Power BI Dashboard','Add a short description'],
+['powerbi-3.jpg','Power BI','Power BI Dashboard','Add a short description'],
+['powerbi-4.jpg','Power BI','Power BI Dashboard','Add a short description'],
+['linkedin-ads-1.jpg','LinkedIn & YouTube Ads','LinkedIn / YouTube Ads','Add a short description'],
+['linkedin-ads-2.jpg','LinkedIn & YouTube Ads','LinkedIn / YouTube Ads','Add a short description'],
+['linkedin-ads-3.jpg','LinkedIn & YouTube Ads','LinkedIn / YouTube Ads','Add a short description'],
 ['portfolio-1.jpg','Photos','Rekha','Bengaluru']
 ];
 const g=$('#gallery'),fl=$('#filters');let cur='All';
+// each sub-category appears under one or more section tabs
+const TABS={'Meta Ads':['Paid Media','Meta Ads'],'Lead Forms':['Paid Media','Meta Ads'],'Google Ads':['Paid Media','Google Ads'],'LinkedIn & YouTube Ads':['Paid Media'],
+'Search Console':['SEO'],'Local Rankings':['SEO','GMB'],'GMB Profile':['GMB'],'Website':['Web'],'Website Audit':['Web'],
+'Instagram':['Social Media'],'YouTube':['Social Media'],'Facebook':['Social Media'],'Google Analytics':['Analytics'],'Monthly Reports':['Analytics'],
+'Power BI':['Dashboards'],'Creatives':['Creatives'],'Photos':['Photos']};
+const ORDER=['Paid Media','Meta Ads','Google Ads','SEO','GMB','Web','Social Media','Analytics','Dashboards','Creatives','Photos'];
 // check which images exist first (also tries an /images folder), then draw only those
 const probe=f=>new Promise(res=>{const t=new Image();t.onload=()=>res(f);t.onerror=()=>{const u=new Image();u.onload=()=>res('images/'+f);u.onerror=()=>res(null);u.src='images/'+f};t.src=f});
 Promise.all(items.map(it=>probe(it[0]))).then(found=>{
- items.forEach(([f,cat,t,cap],i)=>{if(!found[i])return;const d=document.createElement('div');d.className='card'+(cat==='Photos'?'':' shot');d.dataset.cat=cat;
-  d.innerHTML=`<img src="${found[i]}" alt="${t}" loading="lazy"><span class="tag">${cat}</span><div class="cap"><b>${t}</b>${cap}</div>`;
-  d.onclick=()=>{$('#lb img').src=found[i];$('#lb').classList.add('on')};g.append(d)});
+ const list=items.map((it,i)=>({it,src:found[i],tabs:TABS[it[1]]||[it[1]]})).filter(x=>x.src);
+ const rank=x=>Math.min(...x.tabs.map(t=>{const k=ORDER.indexOf(t);return k<0?99:k}));
+ list.sort((a,b)=>rank(a)-rank(b));
+ list.forEach(({it:[f,cat,t,cap],src,tabs})=>{const d=document.createElement('div');d.className='card'+(cat==='Photos'?'':' shot');d.dataset.tabs='|'+tabs.join('|')+'|';
+  d.innerHTML=`<img src="${src}" alt="${t}" loading="lazy"><span class="tag">${cat}</span><div class="cap"><b>${t}</b>${cap}</div>`;
+  d.onclick=()=>{$('#lb img').src=src;$('#lb').classList.add('on')};g.append(d)});
  buildFilters()});
-function buildFilters(){const cats=['All',...new Set($$('#gallery .card').map(c=>c.dataset.cat))];
+function buildFilters(){const have=new Set();$$('#gallery .card').forEach(c=>c.dataset.tabs.split('|').filter(Boolean).forEach(t=>have.add(t)));
+ const cats=['All',...ORDER.filter(t=>have.has(t))];
  fl.innerHTML='';cats.forEach(c=>{const b=document.createElement('button');b.textContent=c;b.className=c===cur?'on':'';
-  b.onclick=()=>{cur=c;$$('#gallery .card').forEach(x=>x.style.display=(c==='All'||x.dataset.cat===c)?'':'none');buildFilters()};fl.append(b)})}
+  b.onclick=()=>{cur=c;$$('#gallery .card').forEach(x=>x.style.display=(c==='All'||x.dataset.tabs.includes('|'+c+'|'))?'':'none');buildFilters()};fl.append(b)})}
 $$('.case img').forEach(i=>i.onclick=()=>{$('#lb img').src=i.src;$('#lb').classList.add('on')});
 // fallback if images are inside an /images folder
 $$('img.avatar,.about img,.hero-img').forEach(i=>i.onerror=()=>{if(!i.dataset.r){i.dataset.r=1;i.src='images/'+i.getAttribute('src')}});
