@@ -43,6 +43,15 @@ section:nth-of-type(even){background:var(--alt)}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .hero-img{width:100%;max-height:82vh;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:18px;border:4px solid rgba(20,157,221,.5);box-shadow:0 20px 60px rgba(0,0,0,.5);justify-self:center;max-width:430px}
 #home p.tag{font-size:clamp(14px,1.8vw,17px);opacity:.85;margin:-6px 0 24px}
+/* results strip */
+.results{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:46px;padding-top:34px;border-top:1px solid var(--line)}
+.res{display:flex;gap:14px;align-items:flex-start}
+.res i{font-size:40px;line-height:1;color:var(--accent)}
+.res strong{display:block;font:700 40px 'Raleway',sans-serif;line-height:1.05;color:var(--text)}
+.res span{display:block;font-size:13px;line-height:1.5;color:var(--muted);margin-top:6px}
+.res span b{color:var(--text)}
+@media(max-width:1000px){.results{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.results{grid-template-columns:1fr}}
 @media(max-width:1000px){.hero{grid-template-columns:1fr;text-align:center}.hero-img{order:-1;max-width:260px}}
 #home h2{font-size:clamp(40px,7vw,64px);font-weight:700}
 #home p{font-size:clamp(20px,3vw,28px);margin:8px 0 22px}
@@ -202,6 +211,12 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
       <div class="stat"><i class="bi bi-journal-richtext"></i><div><strong data-n="6">0</strong><span>Freelance clients (WordPress websites)</span></div></div>
       <div class="stat"><i class="bi bi-translate"></i><div><strong data-n="4">0</strong><span>Languages spoken</span></div></div>
     </div>
+    <div class="results">
+      <div class="res"><i class="bi bi-bullseye"></i><div><strong data-count="5060" data-suffix="+">0</strong><span><b>Leads Generated</b> through Meta lead-form campaigns, Aug to mid-Oct 2026</span></div></div>
+      <div class="res"><i class="bi bi-currency-rupee"></i><div><strong data-count="42" data-prefix="₹">0</strong><span><b>Lowest Cost Per Lead</b> on Meta lead campaigns (Aug 2026)</span></div></div>
+      <div class="res"><i class="bi bi-eye"></i><div><strong data-count="45151">0</strong><span><b>GMB Profile Views</b> in Jun–Sep 2026 for a local studio profile</span></div></div>
+      <div class="res"><i class="bi bi-search"></i><div><strong data-count="1" data-prefix="#">0</strong><span><b>Local Search Ranking</b>, up from 5th place for “interior design” (Jun to Sep 2026)</span></div></div>
+    </div>
   </div>
 </section>
 
@@ -360,11 +375,13 @@ function spy(){const y=scrollY+200;let id='home';secs.forEach(s=>{if(s.offsetTop
  $('#top').classList.toggle('on',scrollY>300)}
 addEventListener('scroll',spy);spy();
 $('#top').onclick=()=>scrollTo({top:0});
+function animateCounts(){$$('[data-count]').forEach(el=>{const n=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';const t0=performance.now();
+ (function f(t){const k=Math.min(1,(t-t0)/1600),v=Math.round(n*(1-Math.pow(1-k,3)));el.textContent=pre+v.toLocaleString('en-IN')+(k===1?suf:'');if(k<1)requestAnimationFrame(f)})(t0)})}
 // animate bars + counters on view
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
  $$('.fill').forEach(f=>f.style.width=f.dataset.w+'%');
  if(e.target.id==='about')$$('[data-n]').forEach(el=>{const n=+el.dataset.n;let i=0;const k=setInterval(()=>{el.textContent=++i;if(i>=n)clearInterval(k)},120)});
- io.unobserve(e.target)}),{threshold:.25});
+ if(e.target.id==='about')animateCounts();io.unobserve(e.target)}),{threshold:.25});
 ['#about','#skills'].forEach(s=>io.observe($(s)));
 // portfolio gallery: add a line here for every new image (file, category, title, caption)
 const items=[
