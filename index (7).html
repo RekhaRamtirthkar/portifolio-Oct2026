@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rekha | Paid Media Specialist, ERP Developer, HR Operations &amp; Data Analyst</title>
+<meta name="description" content="Rekha – Paid Media Specialist, Website and ERP Developer, HR Operations and Data Analyst in Bengaluru. Google Ads, Meta Ads, WordPress, SEO, Power BI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+:root{--accent:#149ddd;--dark:#040b14;--text:#272829;--bg:#fff;--alt:#f5faff;--card:#fff;--muted:#6b7280;--line:#e5eaf0}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1220;--alt:#0f1829;--card:#131d30;--text:#e6ebf2;--muted:#9aa6b8;--line:#22304a}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+h1,h2,h3,h4{font-family:'Raleway',sans-serif}
+a{color:var(--accent);text-decoration:none}
+/* sidebar */
+#sidebar{position:fixed;inset:0 auto 0 0;width:300px;background:var(--dark);padding:24px 18px;overflow-y:auto;z-index:50;transition:.3s;display:flex;flex-direction:column;align-items:center}
+.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:6px solid #2c2f3f}
+#sidebar h1{color:#fff;font-size:24px;margin:14px 0 10px}
+.social{display:flex;gap:8px;margin-bottom:26px}
+.social a{width:36px;height:36px;border-radius:50%;background:#212431;color:#fff;display:grid;place-items:center;font-size:16px;transition:.3s}
+.social a:hover{background:var(--accent)}
+nav{width:100%}
+nav a{display:flex;align-items:center;gap:10px;color:#a8a9b4;padding:11px 16px;font:600 15px 'Raleway',sans-serif;border-radius:4px;transition:.3s}
+nav a i{font-size:18px}
+nav a:hover,nav a.active{color:#fff}
+nav a.active i,nav a:hover i{color:var(--accent)}
+#toggle{display:none;position:fixed;top:14px;right:14px;z-index:60;width:42px;height:42px;border:0;border-radius:50%;background:var(--dark);color:#fff;font-size:22px;cursor:pointer}
+main{margin-left:300px}
+section{padding:70px 0}
+section:nth-of-type(even){background:var(--alt)}
+.wrap{max-width:1050px;margin:0 auto;padding:0 28px}
+.title{margin-bottom:34px}
+.title h2{font-size:32px;font-weight:700;position:relative;padding-bottom:12px;color:var(--text)}
+.title h2::after{content:'';position:absolute;left:0;bottom:0;width:50px;height:3px;background:var(--accent)}
+.title p{color:var(--muted);margin-top:10px}
+/* hero */
+#home{min-height:100vh;padding:40px 0;display:flex;align-items:center;color:#fff;background:radial-gradient(circle at 80% 30%,#0e3550 0%,#071522 55%,#040b14 100%)}
+#home .wrap{width:100%}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero-img{width:100%;max-height:82vh;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:18px;border:4px solid rgba(20,157,221,.5);box-shadow:0 20px 60px rgba(0,0,0,.5);justify-self:center;max-width:430px}
+#home p.tag{font-size:clamp(14px,1.8vw,17px);opacity:.85;margin:-6px 0 24px}
+#home p.tag span{display:inline-block;margin-right:14px;padding-right:14px;border-right:1px solid rgba(255,255,255,.35);line-height:1.2;margin-bottom:6px}
+#home p.tag span:last-child{border:0;margin-right:0;padding-right:0}
+/* results strip */
+.results{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:46px;padding-top:34px;border-top:1px solid var(--line)}
+.res{display:flex;gap:14px;align-items:flex-start}
+.res i{font-size:40px;line-height:1;color:var(--accent)}
+.res strong{display:block;font:700 40px 'Raleway',sans-serif;line-height:1.05;color:var(--text)}
+.res span{display:block;font-size:13px;line-height:1.5;color:var(--muted);margin-top:6px}
+.res span b{color:var(--text)}
+@media(max-width:1000px){.results{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.results{grid-template-columns:1fr}}
+@media(max-width:1000px){.hero{grid-template-columns:1fr;text-align:center}.hero-img{order:-1;max-width:260px}}
+#home h2{font-size:clamp(40px,7vw,64px);font-weight:700}
+#home p{font-size:clamp(20px,3vw,28px);margin:8px 0 22px}
+#typed{color:var(--accent);border-bottom:2px solid var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:11px 26px;border-radius:50px;font:600 15px 'Raleway',sans-serif;border:0;cursor:pointer;transition:.3s}
+.btn:hover{background:#37b3ed;color:#fff}
+.btn.ghost{background:transparent;border:2px solid #fff;margin-left:10px}
+/* about */
+.about{display:grid;grid-template-columns:260px 1fr;gap:34px;align-items:start}
+.about img{width:100%;border-radius:8px;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.about h3{font-size:24px;color:#173b6c;margin-bottom:6px}
+@media(prefers-color-scheme:dark){.about h3{color:#8fc7ff}}
+.about .it{color:var(--muted);font-style:italic;margin-bottom:14px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:10px 30px;list-style:none;margin:14px 0}
+.info li::before{content:'›';color:var(--accent);font-weight:700;margin-right:6px}
+.info b{margin-right:4px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.stat{display:flex;gap:12px;align-items:flex-start}
+.stat i{font-size:34px;color:var(--accent)}
+.stat strong{display:block;font:700 34px 'Raleway',sans-serif;line-height:1}
+.stat span{color:var(--muted);font-size:14px}
+/* skills */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:10px 40px}
+.bar .label{display:flex;justify-content:space-between;font:600 13px 'Raleway',sans-serif;text-transform:uppercase;margin-top:14px}
+.track{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:6px}
+.fill{height:100%;width:0;background:var(--accent);transition:width 1.2s ease}
+.also{margin-top:26px;color:var(--muted);font-size:14px}
+/* resume */
+.cols{display:grid;grid-template-columns:1fr 1.4fr;gap:40px}
+.cols h3{font-size:22px;margin:0 0 18px;color:var(--text)}
+.job{border-left:2px solid var(--accent);padding:0 0 18px 20px;position:relative;margin-left:6px}
+.job::before{content:'';position:absolute;left:-9px;top:2px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.job h4{font-size:16px;text-transform:uppercase;color:var(--text)}
+.job h5{display:inline-block;background:var(--line);padding:2px 12px;font-size:13px;margin:6px 0;border-radius:4px;color:var(--text)}
+.job em{display:block;margin-bottom:6px;color:var(--muted)}
+.job ul{padding-left:18px;color:var(--text);font-size:14px}
+.job li{margin-bottom:4px}
+.summary{font-size:15px;margin-bottom:26px}
+/* portfolio */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{position:relative;overflow:hidden;border-radius:8px;background:var(--card);border:1px solid var(--line);cursor:zoom-in;aspect-ratio:3/4}
+.card img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover img{transform:scale(1.06)}
+.card .cap{position:absolute;inset:auto 0 0 0;padding:14px;color:#fff;font-size:14px;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+.card .cap b{display:block;font-family:'Raleway',sans-serif}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;place-items:center;z-index:100;cursor:zoom-out}
+#lb.on{display:grid}
+#lb img{max-width:92vw;max-height:92vh;border-radius:6px}
+/* services */
+.services{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
+.svc{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);padding:22px;border-radius:8px;transition:.3s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(20,157,221,.18)}
+.svc .ic{flex:none;width:52px;height:52px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:22px}
+.svc h4{font-size:17px;margin-bottom:4px;color:var(--text)}
+.svc p{font-size:14px;color:var(--muted)}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.5fr;gap:28px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px}
+.ci{display:flex;gap:14px;margin-bottom:22px;align-items:center}
+.ci i{width:46px;height:46px;border-radius:50%;background:rgba(20,157,221,.12);color:var(--accent);display:grid;place-items:center;font-size:19px;flex:none}
+.ci h4{font-size:16px;color:var(--text)}.ci p{font-size:14px;color:var(--muted);word-break:break-all}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,textarea{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);font:inherit;margin-bottom:14px}
+input:focus,textarea:focus{outline:2px solid var(--accent);border-color:transparent}
+label{font-size:14px;font-weight:600;display:block;margin-bottom:4px}
+form{text-align:left}.send{text-align:center}
+footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);background:var(--bg)}
+#top{position:fixed;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;border:0;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:40}
+#top.on{opacity:1;pointer-events:auto}
+
+/* portfolio v2 */
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 26px;margin:0 0 30px}
+.filters button{border:0;border-bottom:2px solid transparent;background:none;color:var(--text);padding:6px 2px;font:600 13px 'Raleway',sans-serif;letter-spacing:.6px;text-transform:uppercase;cursor:pointer;transition:.25s}
+.filters button.on,.filters button:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.card{aspect-ratio:4/3}
+.card.shot{aspect-ratio:16/10}.card.shot .cap{font-size:12px;padding:10px 12px}.card.shot .cap b{font-size:13px}
+.card.shot img{object-fit:contain;object-position:top;background:#fff}
+.card .tag{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:50px}
+.sub{font-size:22px;margin:46px 0 6px}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:18px}
+.case{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:8px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,.05)}
+.case small{color:var(--accent);font:700 12px 'Raleway',sans-serif;letter-spacing:.5px}
+.case h4{font-size:19px;margin:6px 0 10px;color:var(--text)}
+.case img{width:100%;border-radius:6px;border:1px solid var(--line);cursor:zoom-in;margin-bottom:12px}
+.case p{font-size:14px;color:var(--muted);margin-bottom:14px}
+.m{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid var(--line);padding-top:12px;text-align:left}
+.m b{display:block;font:700 16px 'Raleway',sans-serif;color:var(--text)}.m span{font-size:11px;color:var(--muted)}
+@media(max-width:560px){.m{grid-template-columns:1fr 1fr}}
+@media(max-width:1000px){
+ #sidebar{transform:translateX(-100%)}#sidebar.open{transform:none}
+ #toggle{display:block}main{margin-left:0}
+ .about,.cols,.contact,.skills{grid-template-columns:1fr}
+ .about img{max-width:260px}.stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.info,.row2{grid-template-columns:1fr}.btn.ghost{margin:10px 0 0}}
+</style>
+</head>
+<body>
+<button id="toggle" aria-label="Menu"><i class="bi bi-list"></i></button>
+
+<aside id="sidebar">
+  <img class="avatar" src="profile.jpg" alt="Rekha">
+  <h1>Rekha</h1>
+  <div class="social">
+    <a href="https://linkedin.com/in/rekha-ramtirthkar" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    <a href="mailto:rekharamtirthkar@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+    <a href="https://wa.me/919164465721" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a href="tel:+919164465721" aria-label="Call"><i class="bi bi-telephone-fill"></i></a>
+  </div>
+  <nav>
+    <a href="#home" class="active"><i class="bi bi-house"></i>Home</a>
+    <a href="#about"><i class="bi bi-person"></i>About</a>
+    <a href="#skills"><i class="bi bi-bar-chart"></i>Skills</a>
+    <a href="#resume"><i class="bi bi-file-earmark-text"></i>Resume</a>
+    <a href="#portfolio"><i class="bi bi-images"></i>Portfolio</a>
+    <a href="#services"><i class="bi bi-hdd-stack"></i>Services</a>
+    <a href="#contact"><i class="bi bi-envelope"></i>Contact</a>
+  </nav>
+</aside>
+
+<main>
+<section id="home">
+  <div class="wrap hero">
+    <div>
+    <h2>Rekha</h2>
+    <p>I'm <span id="typed"></span></p>
+      <p class="tag"><span>Paid Media Specialist</span><span>Website Developer</span><span>ERP Developer</span><span>HR Operations</span><span>Data Analyst</span></p>
+    <a class="btn" href="Resume_Rekha_July.pdf" download><i class="bi bi-download"></i>Download Resume</a>
+    <a class="btn ghost" href="#contact">Hire Me</a>
+  </div>
+    <img class="hero-img" src="portfolio-1.jpg" alt="Rekha">
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="title"><h2>About</h2><p>Paid Media Specialist, Website &amp; ERP Developer, HR Operations and Data Analyst based in Bengaluru.</p></div>
+    <div class="about">
+      <img src="portfolio-1.jpg" alt="Rekha">
+      <div>
+        <h3>Paid Media Specialist, Website &amp; ERP Developer, HR Operations &amp; Data Analyst.</h3>
+        <p class="it">Google Ads · Meta Ads · WordPress · ERP · HR Operations · SEO · AEO · GEO · Power BI</p>
+        <ul class="info">
+          <li><b>Location:</b>Bengaluru, India</li>
+          <li><b>Experience:</b>8+ Years</li>
+          <li><b>Email:</b>rekharamtirthkar@gmail.com</li>
+          <li><b>Phone:</b>+91 91644 65721</li>
+          <li><b>Degree:</b>B.Tech / B.E. (2017)</li>
+          <li><b>Languages:</b>English, Hindi, Marathi, Telugu</li>
+        </ul>
+        <p>Hardworking professional engaged in all facets of website development and digital marketing — website development, hosting, social media management, SEO, AEO, GEO and paid media (Google, Meta, LinkedIn and YouTube Ads). I create content and designs with Canva, Adobe and CapCut/VN, and work hands-on with AI tools, LMS development &amp; maintenance, Zoho tools and data analysis.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><i class="bi bi-emoji-smile"></i><div><strong data-n="8">0</strong><span>Years of experience since 2018</span></div></div>
+      <div class="stat"><i class="bi bi-buildings"></i><div><strong data-n="5">0</strong><span>Organisations, full-time &amp; internship</span></div></div>
+      <div class="stat"><i class="bi bi-journal-richtext"></i><div><strong data-n="6">0</strong><span>Freelance clients (WordPress websites)</span></div></div>
+      <div class="stat"><i class="bi bi-translate"></i><div><strong data-n="4">0</strong><span>Languages spoken</span></div></div>
+    </div>
+    <div class="results">
+      <div class="res"><i class="bi bi-bullseye"></i><div><strong data-count="5060" data-suffix="+">0</strong><span><b>Leads Generated</b> through Meta lead-form campaigns, Aug to mid-Oct 2026</span></div></div>
+      <div class="res"><i class="bi bi-currency-rupee"></i><div><strong data-count="42" data-prefix="₹">0</strong><span><b>Lowest Cost Per Lead</b> on Meta lead campaigns (Aug 2026)</span></div></div>
+      <div class="res"><i class="bi bi-eye"></i><div><strong data-count="45151">0</strong><span><b>GMB Profile Views</b> in Jun–Sep 2026 for a local studio profile</span></div></div>
+      <div class="res"><i class="bi bi-search"></i><div><strong data-count="1" data-prefix="#">0</strong><span><b>Local Search Ranking</b>, up from 5th place for “interior design” (Jun to Sep 2026)</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="title"><h2>Skills</h2><p>Paid media, development, hosting, ERP, HR and analytics tools I use hands-on.</p></div>
+    <div class="skills">
+      <div class="bar"><div class="label"><span>WordPress / HTML / Joomla / Shopify</span><span>95%</span></div><div class="track"><div class="fill" data-w="95"></div></div></div>
+      <div class="bar"><div class="label"><span>SEO / AEO / GEO</span><span>90%</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
+      <div class="bar"><div class="label"><span>Paid Media (Google, Meta, LinkedIn, YouTube)</span><span>90%</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
+      <div class="bar"><div class="label"><span>Power BI, SQL &amp; Data Analysis</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+      <div class="bar"><div class="label"><span>Canva / Adobe / CapCut / VN</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+      <div class="bar"><div class="label"><span>Moodle LMS on AWS &amp; Zoho tools</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+      <div class="bar"><div class="label"><span>Hostinger &amp; GoDaddy Hosting</span><span>90%</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
+      <div class="bar"><div class="label"><span>Wix &amp; Webflow Website Development</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+      <div class="bar"><div class="label"><span>ERP Software Setup &amp; Maintenance</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+      <div class="bar"><div class="label"><span>HR: Onboarding, Candidates &amp; Technical Rounds</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+    </div>
+    <p class="also"><b>Also:</b> Hostinger · GoDaddy · AWS · Wix · Webflow · ERP software · Salesforce · HubSpot · Zoho CRM · Mailchimp · Ahrefs · SEMrush · Google Analytics · Search Console &amp; GMB · GitHub · Zapier · Zoom · IndiaMART · ExportersIndia · TradeIndia · ChatGPT · Gemini · Claude · Canva AI · Gamma AI</p>
+  </div>
+</section>
+
+<section id="resume">
+  <div class="wrap">
+    <div class="title"><h2>Resume</h2><p>Experience and education at a glance.</p></div>
+    <p class="summary">Hardworking professional across website development and digital marketing — SEO, AEO, GEO, paid media, content creation, LMS, Zoho tools and data analysis.</p>
+    <div class="cols">
+      <div>
+        <h3>Education</h3>
+        <div class="job"><h4>B.Tech / B.E.</h4><h5>2017</h5><em>Pune University</em></div>
+        <div class="job"><h4>XIIth – English</h4><h5>2013</h5></div>
+        <div class="job"><h4>Xth</h4><h5>2009</h5></div>
+        <h3 style="margin-top:20px">Key Tools</h3>
+        <div class="job"><h4>B2B SaaS</h4><em>Salesforce, HubSpot, Zoho CRM, Mailchimp, Ahrefs, SEMrush, GA, Zapier</em></div>
+        <div class="job"><h4>Content &amp; Design</h4><em>Canva, Adobe, CapCut, VN</em></div>
+      </div>
+      <div>
+        <h3>Professional Experience</h3>
+        <div class="job"><h4>Digital Marketing Analyst</h4><h5>May 2026 – Present</h5><em>Cozy Vista Pvt Ltd</em><ul><li>Built &amp; maintained WordPress/HTML sites with SEO; managed hosting, domains and email.</li><li>Ran SEO and paid ads (Google, Meta, LinkedIn, YouTube) with A/B testing to drive B2B leads.</li><li>Built Power BI dashboards with SQL, Excel and APIs to track KPIs.</li></ul></div>
+        <div class="job"><h4>Website Development &amp; Digital Marketing Executive</h4><h5>Feb 2025 – Mar 2026</h5><em>Sristi Global School</em><ul><li>Managed websites, AWS/GoDaddy hosting, SEO and paid campaigns.</li><li>Resolved SaaS, IaaS, PaaS and Office 365 issues; hosted webinars and robotics classes.</li></ul></div>
+        <div class="job"><h4>Websites Maintenance &amp; Digital Marketing Executive</h4><h5>Jul 2024 – Feb 2025</h5><em>Chemix Specialty Gases &amp; Equipment</em><ul><li>Built, maintained and deployed websites; managed SEO, paid and social campaigns.</li><li>Analysed performance with Salesforce, HubSpot, Zoho CRM, SEMrush and GA.</li></ul></div>
+        <div class="job"><h4>System Administrator (Internship)</h4><h5>Jan 2024 – Apr 2024</h5><em>MTAB Technology Pvt Ltd</em><ul><li>Deployed Moodle LMS on AWS (Ubuntu), customised UI and integrated Zoho tools.</li><li>Planned roadmaps, coordinated clients and designed banners and certificates.</li></ul></div>
+        <div class="job"><h4>Website Developer, Digital Marketing &amp; Tech Support Executive</h4><h5>Jun 2020 – Oct 2023</h5><em>Sachina Engineering</em><ul><li>Developed WordPress, Joomla and Shopify sites; ran Google and Meta Ads for real-estate and IT clients.</li><li>Built interactive Power BI dashboards and optimised CPL/ROI.</li></ul></div>
+        <div class="job"><h4>WordPress Website Developer</h4><h5>Jul 2018 – Mar 2020</h5><em>Freelancing</em><ul><li>Clients: IIBS, Prazision, Earth Essence, Soil Mech, Ovi Studio, Swamy Hotel.</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="title"><h2>Portfolio</h2><p>Campaign results, screenshots and work samples. Click any image to enlarge.</p></div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="gallery"></div>
+
+    <h3 class="sub">Featured Case Studies</h3>
+    <p style="color:var(--muted);font-size:14px">Results from Meta Ads, Search Console, Google Analytics and Google Business Profile.</p>
+    <div class="cases">
+      <div class="case"><small>01 | META ADS | AUGUST 2026</small><h4>Lead Generation Campaigns</h4><img src="meta-ads-aug.jpg" alt="Meta Ads August 2026" loading="lazy">
+        <p>Four lead-form campaigns delivered 1,996 leads; the best campaigns ran at about ₹42 per lead.</p>
+        <div class="m"><div><b>1,996</b><span>Leads</span></div><div><b>₹61.61</b><span>Avg CPL</span></div><div><b>₹1.23L</b><span>Spend</span></div><div><b>13.4L</b><span>Impressions</span></div></div></div>
+      <div class="case"><small>02 | META ADS | SEPTEMBER 2026</small><h4>Scaling Lead Volume</h4><img src="meta-ads-sep.jpg" alt="Meta Ads September 2026" loading="lazy">
+        <p>Scaled spend and delivered the highest monthly volume with 2,226 leads and 5.3 lakh accounts reached.</p>
+        <div class="m"><div><b>2,226</b><span>Leads</span></div><div><b>₹68.00</b><span>Avg CPL</span></div><div><b>₹1.51L</b><span>Spend</span></div><div><b>17.1L</b><span>Impressions</span></div></div></div>
+      <div class="case"><small>03 | META ADS | 1–16 OCTOBER 2026</small><h4>Ongoing Optimisation</h4><img src="meta-ads-oct.jpg" alt="Meta Ads October 2026" loading="lazy">
+        <p>838 leads in the first 16 days of October while testing audiences and creatives.</p>
+        <div class="m"><div><b>838</b><span>Leads</span></div><div><b>₹88.44</b><span>Avg CPL</span></div><div><b>₹74K</b><span>Spend</span></div><div><b>8.0L</b><span>Impressions</span></div></div></div>
+      <div class="case"><small>04 | SEO | JUN–SEP 2026</small><h4>Search Console Performance</h4><img src="sc-1.jpg" alt="Search Console" loading="lazy">
+        <p>Organic search grew on brand and local interior keywords. Average position moved from 15.4 (Jan–May) to 12.8 (Jun–Sep).</p>
+        <div class="m"><div><b>248</b><span>Clicks</span></div><div><b>6.92K</b><span>Impressions</span></div><div><b>3.6%</b><span>CTR</span></div><div><b>12.8</b><span>Avg position</span></div></div></div>
+      <div class="case"><small>05 | ANALYTICS | JUN–SEP 2026</small><h4>Website Traffic by Channel</h4><img src="analytics-3.jpg" alt="GA4 channels" loading="lazy">
+        <p>GA4 reporting that separates direct, organic, paid and referral users to show which channels bring traffic.</p>
+        <div class="m"><div><b>788</b><span>Direct</span></div><div><b>543</b><span>Organic</span></div><div><b>783</b><span>Paid</span></div><div><b>19</b><span>Referral</span></div></div></div>
+      <div class="case"><small>06 | GMB | APR–MAY 2026</small><h4>Google Business Profile</h4><img src="gmb-2.jpg" alt="GMB insights" loading="lazy">
+        <p>Local profile managed and tracked for views, calls, directions and the search terms that surface it.</p>
+        <div class="m"><div><b>628</b><span>Profile views</span></div><div><b>233</b><span>Interactions</span></div></div></div>
+      <div class="case"><small>07 | GMB | JUN–SEP 2026</small><h4>Google Business Profile Growth</h4><img src="gmb-8.jpg" alt="GMB Jun-Sep" loading="lazy">
+        <p>Local SEO and profile management for a Whitefield studio, with most views coming from Google Maps on mobile.</p>
+        <div class="m"><div><b>45,151</b><span>Profile views</span></div><div><b>3,262</b><span>Searches</span></div><div><b>1,718</b><span>Interactions</span></div><div><b>92%</b><span>Maps mobile</span></div></div></div>
+      <div class="case"><small>08 | GOOGLE ADS | 20 AUG – 18 SEP 2026</small><h4>Conversion Tracking</h4><img src="google-ads-1.jpg" alt="Google Ads conversions" loading="lazy">
+        <p>Conversion actions set up to track directions, contacts, phone calls and lead form submissions.</p>
+        <div class="m"><div><b>914</b><span>Directions</span></div><div><b>239</b><span>Contacts</span></div><div><b>10</b><span>Phone leads</span></div><div><b>5</b><span>Lead forms</span></div></div></div>
+      <div class="case"><small>09 | LOCAL SEO | JUN–SEP 2026</small><h4>Local Pack Ranking</h4><img src="local-3.jpg" alt="Local ranking" loading="lazy">
+        <p>Profile optimisation and review growth moved the listing from the 5th result (1 Jun) to the 1st result (12 Sep) for “interior design” searches.</p>
+        <div class="m"><div><b>#5 → #1</b><span>Local rank</span></div><div><b>4.8★</b><span>Rating</span></div><div><b>112 → 118</b><span>Reviews</span></div></div></div>
+      <div class="case"><small>10 | GOOGLE ADS | JUL–SEP 2026</small><h4>Performance Max Leads</h4><img src="google-ads-4.jpg" alt="Google Ads overview" loading="lazy">
+        <p>Performance Max campaign targeting a 16 km radius around the studio, tracking directions, contacts, calls and lead forms.</p>
+        <div class="m"><div><b>21.4K</b><span>Clicks</span></div><div><b>376K</b><span>Impressions</span></div><div><b>2.27K</b><span>Conversions</span></div><div><b>₹38.8K</b><span>Cost</span></div></div></div>
+      <div class="case"><small>11 | WEBSITE AUDIT | SEP 2026</small><h4>Website Performance Check</h4><img src="audit-2.jpg" alt="GTmetrix report" loading="lazy">
+        <p>GTmetrix audit covering speed, structure and Core Web Vitals to guide technical fixes.</p>
+        <div class="m"><div><b>C</b><span>Grade</span></div><div><b>68%</b><span>Performance</span></div><div><b>85%</b><span>Structure</span></div><div><b>1.4s</b><span>LCP</span></div></div></div>
+      <div class="case"><small>12 | ANALYTICS | JAN–AUG 2026</small><h4>Website Traffic Growth</h4><img src="analytics-6.jpg" alt="GA4 growth" loading="lazy">
+        <p>GA4 shows traffic more than doubling from Jan–May (5 months) to Jun–Aug (3 months) after SEO, GBP and paid campaigns went live.</p>
+        <div class="m"><div><b>583 → 1.3K</b><span>Users</span></div><div><b>902 → 2.3K</b><span>Sessions</span></div><div><b>1m → 2m 11s</b><span>Engagement</span></div></div></div>
+      <div class="case"><small>13 | GMB | JUN–AUG 2026</small><h4>Year-on-Year Profile Growth</h4><img src="gmb-21.jpg" alt="GMB year on year" loading="lazy">
+        <p>Business Profile reach compared with the same period last year, as reported by Google.</p>
+        <div class="m"><div><b>29,284</b><span>Profile views</span></div><div><b>3,262</b><span>Searches</span></div><div><b>1,498</b><span>Interactions</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="title"><h2>Services</h2><p>What I can do for your business.</p></div>
+    <div class="services">
+      <div class="svc"><div class="ic"><i class="bi bi-code-slash"></i></div><div><h4>Website Development</h4><p>WordPress, HTML, Joomla and Shopify sites with hosting, domain, email and deployment support.</p></div></div>
+      <div class="svc"><div class="ic"><i class="bi bi-graph-up-arrow"></i></div><div><h4>SEO, AEO &amp; GEO</h4><p>Search, answer-engine and generative-engine optimisation to grow organic traffic and leads.</p></div></div>
+      <div class="svc"><div class="ic"><i class="bi bi-megaphone"></i></div><div><h4>Paid Media &amp; Social</h4><p>Google, Meta, LinkedIn and YouTube Ads with A/B testing and B2B lead generation.</p></div></div>
+      <div class="svc"><div class="ic"><i class="bi bi-bar-chart-line"></i></div><div><h4>Power BI &amp; Data Analytics</h4><p>Interactive KPI dashboards using SQL, Excel, SQL Server and APIs.</p></div></div>
+      <div class="svc"><div class="ic"><i class="bi bi-mortarboard"></i></div><div><h4>LMS Setup &amp; Maintenance</h4><p>Moodle on AWS with custom themes, Zoho integration, roles, cohorts and reporting.</p></div></div>
+      <div class="svc"><div class="ic"><i class="bi bi-brush"></i></div><div><h4>Content &amp; Design</h4><p>Banners, certificates, reels and marketing creatives with Canva, Adobe, CapCut and VN.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="title"><h2>Contact</h2><p>Have a project in mind? Let's talk.</p></div>
+    <div class="contact">
+      <div class="box">
+        <div class="ci"><i class="bi bi-geo-alt"></i><div><h4>Address</h4><p>Bengaluru, India</p></div></div>
+        <div class="ci"><i class="bi bi-telephone"></i><div><h4>Call Me</h4><p>+91 91644 65721</p></div></div>
+        <div class="ci"><i class="bi bi-envelope"></i><div><h4>Email Me</h4><p>rekharamtirthkar@gmail.com</p></div></div>
+        <div class="ci"><i class="bi bi-linkedin"></i><div><h4>LinkedIn</h4><p><a href="https://linkedin.com/in/rekha-ramtirthkar" target="_blank" rel="noopener">linkedin.com/in/rekha-ramtirthkar</a></p></div></div>
+      </div>
+      <form class="box" id="form">
+        <div class="row2"><div><label for="n">Your Name</label><input id="n" required></div><div><label for="e">Your Email</label><input id="e" type="email" required></div></div>
+        <label for="s">Subject</label><input id="s" required>
+        <label for="m">Message</label><textarea id="m" rows="6" required></textarea>
+        <div class="send"><button class="btn" type="submit"><i class="bi bi-whatsapp"></i>Send via WhatsApp</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>© Copyright <b>Rekha</b> &nbsp;All Rights Reserved</footer>
+</main>
+
+<div id="lb"><img alt=""></div>
+<button id="top" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></button>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// mobile menu
+$('#toggle').onclick=()=>$('#sidebar').classList.toggle('open');
+$$('nav a').forEach(a=>a.onclick=()=>$('#sidebar').classList.remove('open'));
+// typed roles
+const roles=['Paid Media Specialist','Website Developer','ERP Developer','HR Operations','Data Analyst','Digital Marketer','SEO & AEO Specialist'];let r=0,c=0,del=false;
+(function t(){const w=roles[r];$('#typed').textContent=w.slice(0,c);
+ if(!del&&c===w.length){del=true;return setTimeout(t,1400)}
+ if(del&&c===0){del=false;r=(r+1)%roles.length}
+ c+=del?-1:1;setTimeout(t,del?40:90)})();
+// active nav + back to top
+const secs=$$('section'),links=$$('nav a');
+function spy(){const y=scrollY+200;let id='home';secs.forEach(s=>{if(s.offsetTop<=y)id=s.id});
+ links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));
+ $('#top').classList.toggle('on',scrollY>300)}
+addEventListener('scroll',spy);spy();
+$('#top').onclick=()=>scrollTo({top:0});
+function animateCounts(){$$('[data-count]').forEach(el=>{const n=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';const t0=performance.now();
+ (function f(t){const k=Math.min(1,(t-t0)/1600),v=Math.round(n*(1-Math.pow(1-k,3)));el.textContent=pre+v.toLocaleString('en-IN')+(k===1?suf:'');if(k<1)requestAnimationFrame(f)})(t0)})}
+// animate bars + counters on view
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
+ $$('.fill').forEach(f=>f.style.width=f.dataset.w+'%');
+ if(e.target.id==='about')$$('[data-n]').forEach(el=>{const n=+el.dataset.n;let i=0;const k=setInterval(()=>{el.textContent=++i;if(i>=n)clearInterval(k)},120)});
+ if(e.target.id==='about')animateCounts();io.unobserve(e.target)}),{threshold:.25});
+['#about','#skills'].forEach(s=>io.observe($(s)));
+// portfolio gallery: add a line here for every new image (file, category, title, caption)
+const items=[
+['meta-ads-aug.jpg','Meta Ads','Meta Ads – August 2026','1,996 leads at ₹61.61 per lead',1],
+['meta-ads-sep.jpg','Meta Ads','Meta Ads – September 2026','2,226 leads, 17L impressions',1],
+['meta-ads-oct.jpg','Meta Ads','Meta Ads – October 2026','838 leads in 16 days',1],
+['meta-audience.jpg','Meta Ads','Audience Targeting','Bengaluru location targeting, 6.5–7.6M audience',1],
+['meta-campaigns-2.jpg','Meta Ads','Meta Ads Campaign Manager','Jun–Aug 2026: 54 campaigns with lead, call and profile-visit results'],
+['meta-targeting-1.jpg','Meta Ads','Detailed Targeting Setup','Interior design, home decor and apartment interests'],
+['meta-targeting-2.jpg','Meta Ads','Interest Targeting','Interior design, home interiors, gated community and more'],
+['meta-targeting-3.jpg','Meta Ads','Location & Age Targeting','17 km radius around the studio, ages 27–55'],
+['meta-targeting-4.jpg','Meta Ads','Audience Setup','Locations, age and custom audience settings'],
+['lead-form-1.jpg','Lead Forms','Lead Form Responses','Qualifying questions (contact details hidden)',1],
+['lead-form-2.jpg','Lead Forms','Lead Form Responses','Plot-size lead form (contact details hidden)',1],
+['lead-form-3.jpg','Lead Forms','Lead Form Responses','3BHK Bangalore lead, ₹8–12 Lakhs budget (contact details hidden)'],
+['meta-campaigns.jpg','Meta Ads','Meta Ads Campaign Manager','50 campaigns: Instagram profile visits at about ₹3–4 each plus lead campaigns'],
+['analytics-3.jpg','Google Analytics','GA4 Traffic by Channel','Jun–Sep 2026: direct, organic, paid and referral'],
+['analytics-1.jpg','Google Analytics','GA4 Traffic by Channel','Jan–Jun 2026 users and engagement time'],
+['analytics-2.jpg','Google Analytics','GA4 Traffic by Channel','Jan–May 2026 users and engagement time'],
+['analytics-5.jpg','Google Analytics','GA4 Device Report','Jun–Sep 2026: mobile, web and tablet traffic'],
+['analytics-4.jpg','Google Analytics','GA4 Device Report','Jan–May 2026: mobile, web and tablet traffic'],
+['analytics-6.jpg','Google Analytics','GA4 Reports Snapshot','Jun–Aug 2026: 1.3K users, 2.3K sessions, 2m 11s engagement'],
+['analytics-7.jpg','Google Analytics','GA4 Reports Snapshot','Jan–May 2026: 583 users, 902 sessions, 1m engagement'],
+['sc-1.jpg','Search Console','Search Console Performance','Jun–Sep 2026: 248 clicks, 6.92K impressions'],
+['sc-2.jpg','Search Console','Search Console Performance','Jan–May 2026: 221 clicks, 5.03K impressions'],
+['sc-3.jpg','Search Console','Top Search Queries','Brand and interior design keywords'],
+['sc-4.jpg','Search Console','Top Search Queries','Jun–Sep 2026 query report'],
+['sc-5.jpg','Search Console','Top Search Queries','Jan–May 2026 query report'],
+['sc-6.jpg','Search Console','Keyword Opportunities','Bespoke, TV unit and wardrobe keywords'],
+['sc-7.jpg','Search Console','Keyword Opportunities','Wardrobe and TV unit queries, Whitefield'],
+['sc-8.jpg','Search Console','Keyword Opportunities','Local keywords for Whitefield, Bengaluru'],
+['sc-9.jpg','Search Console','Keyword Opportunities','Long-tail interior design queries'],
+['sc-10.jpg','Search Console','Keyword Opportunities','Dining, bedroom and kitchen queries'],
+['sc-11.jpg','Search Console','Keyword Opportunities','Interior designer queries across Bengaluru'],
+['sc-15.jpg','Search Console','Search Console Performance','Jun–Aug 2026: 187 clicks, 4.68K impressions'],
+['sc-14.jpg','Search Console','Search Console Performance','Jan–May 2026: 220 clicks, 5K impressions, 4.4% CTR'],
+['gmb-2.jpg','GMB Profile','Google Business Profile','628 profile views, Apr–May 2026'],
+['gmb-1.jpg','GMB Profile','Business Profile Interactions','233 interactions, Apr–May 2026'],
+['gmb-3.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-21.jpg','GMB Profile','Google Business Profile','Jun–Aug 2026: 29,284 profile views, 3,262 searches'],
+['gmb-22.jpg','GMB Profile','Business Profile Interactions','Jun–Aug 2026: 1,498 interactions, +203% vs last year'],
+['gmb-23.jpg','GMB Profile','Business Profile Interactions','Apr–May 2026: 233 interactions'],
+['gmb-24.jpg','GMB Profile','Business Profile Views','Apr–May 2026: 628 profile views'],
+['gmb-8.jpg','GMB Profile','Google Business Profile','Jun–Sep 2026: 45,151 profile views, 3,262 searches'],
+['gmb-4.jpg','GMB Profile','Business Profile Interactions','Jun–Sep 2026: 1,718 interactions'],
+['gmb-6.jpg','GMB Profile','Platform & Location Insights','Jun–Sep 2026: 92% of views from Google Maps on mobile'],
+['gmb-7.jpg','GMB Profile','Searches Breakdown','Top areas: Channasandra, Hoskote, Whitefield'],
+['gmb-5.jpg','GMB Profile','Platform & Search Terms','Apr–May 2026: how customers found the profile'],
+['gmb-9.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-10.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-11.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-12.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-13.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-14.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-15.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-16.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-17.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-18.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['gmb-19.jpg','GMB Profile','Searches Breakdown','Search terms that showed the profile'],
+['local-3.jpg','Local Rankings','Local Ranking: Channasandra','12 Sep 2026: listing in 1st position, 4.8 stars, 118 reviews'],
+['local-7.jpg','Local Rankings','Local Ranking: Bengaluru 560066','12 Sep 2026: listing in 1st position'],
+['local-5.jpg','Local Rankings','Local Pack Scan','12 Sep 2026: managed profile at the top of Businesses'],
+['local-6.jpg','Local Rankings','Local Ranking (Incognito)','12 Sep 2026: first result in Channasandra'],
+['local-4.jpg','Local Rankings','Local Ranking: Bengaluru','12 Sep 2026: first in Places for "interior design near Bengaluru"'],
+['local-1.jpg','Local Rankings','Local SERP Check','13 Aug 2026: competitor comparison for "interior design"'],
+['local-2.jpg','Local Rankings','Local Ranking Tracking','1 Jun 2026: listing position before optimisation'],
+['sc-12.jpg','Search Console','Keyword Opportunities','TV unit and wardrobe queries'],
+['sc-13.jpg','Search Console','Top Search Queries','Brand and interior design queries'],
+['google-ads-1.jpg','Google Ads','Google Ads Conversions','Aug 20–Sep 18, 2026: 914 directions, 239 contacts, 10 calls, 5 lead forms'],
+['google-ads-4.jpg','Google Ads','Google Ads Overview','Jul 21–Sep 18, 2026: 21.4K clicks, 376K impressions, 2.27K conversions'],
+['google-ads-3.jpg','Google Ads','Google Ads Overview','Aug 20–Sep 18, 2026: 19.5K clicks at ₹1.43 average CPC'],
+['google-ads-5.jpg','Google Ads','Google Ads Overview','Jul 22–Sep 19, 2026: 22.2K clicks, 389K impressions'],
+['google-ads-2.jpg','Google Ads','Location Targeting Report','Performance Max leads campaign, 16 km radius around the studio'],
+['google-ads-6.jpg','Google Ads','Google Ads Overview','Jul 25–Sep 12, 2026: 14K clicks, 2.16K conversions, ₹31.2K cost'],
+['google-ads-7.jpg','Google Ads','Conversion Goals Summary','5.08K results: directions, contacts, calls and lead forms'],
+['google-ads-8.jpg','Google Ads','Location Report with Conversions','Performance Max: 123 conversions at ₹43.07 each'],
+['google-ads-9.jpg','Google Ads','Conversion Actions','Clicks-to-call and other tracked conversion actions'],
+['work-summary-1.jpg','Monthly Reports','Monthly Work Summary','May–Sep 2026: website, GBP ranking and paid media work log'],
+['audit-2.jpg','Website Audit','GTmetrix Performance Report','Grade C, 68% performance, 85% structure, LCP 1.4s'],
+['audit-1.jpg','Website Audit','Website Authority Check','1 Jul 2026: Domain Authority 8, 71 backlinks'],
+['audit-3.jpg','Website Audit','Hostinger Page Speed Test','31 Jul 2026: mobile performance score diagnosed for improvement'],
+['instagram-1.jpg','Instagram','Instagram Profile','8,202 followers and 416 posts'],
+['website-1.jpg','Website','Website Project','Add a short description'],
+['website-2.jpg','Website','Website Project','Add a short description'],
+['website-3.jpg','Website','Website Project','Add a short description'],
+['website-4.jpg','Website','Website Project','Add a short description'],
+['website-5.jpg','Website','Website Project','Add a short description'],
+['website-6.jpg','Website','Website Project','Add a short description'],
+['website-7.jpg','Website','Website Project','Add a short description'],
+['website-8.jpg','Website','Website Project','Add a short description'],
+['instagram-2.jpg','Instagram','Instagram','Add a short description'],
+['instagram-3.jpg','Instagram','Instagram','Add a short description'],
+['instagram-4.jpg','Instagram','Instagram','Add a short description'],
+['instagram-5.jpg','Instagram','Instagram','Add a short description'],
+['instagram-6.jpg','Instagram','Instagram','Add a short description'],
+['youtube-1.jpg','YouTube','YouTube','Add a short description'],
+['youtube-2.jpg','YouTube','YouTube','Add a short description'],
+['youtube-3.jpg','YouTube','YouTube','Add a short description'],
+['youtube-4.jpg','YouTube','YouTube','Add a short description'],
+['facebook-1.jpg','Facebook','Facebook','Add a short description'],
+['facebook-2.jpg','Facebook','Facebook','Add a short description'],
+['facebook-3.jpg','Facebook','Facebook','Add a short description'],
+['facebook-4.jpg','Facebook','Facebook','Add a short description'],
+['creative-1.jpg','Creatives','Creative Design','Add a short description'],
+['creative-2.jpg','Creatives','Creative Design','Add a short description'],
+['creative-3.jpg','Creatives','Creative Design','Add a short description'],
+['creative-4.jpg','Creatives','Creative Design','Add a short description'],
+['creative-5.jpg','Creatives','Creative Design','Add a short description'],
+['creative-6.jpg','Creatives','Creative Design','Add a short description'],
+['creative-7.jpg','Creatives','Creative Design','Add a short description'],
+['creative-8.jpg','Creatives','Creative Design','Add a short description'],
+['creative-9.jpg','Creatives','Creative Design','Add a short description'],
+['creative-10.jpg','Creatives','Creative Design','Add a short description'],
+['creative-11.jpg','Creatives','Creative Design','Add a short description'],
+['creative-12.jpg','Creatives','Creative Design','Add a short description'],
+['powerbi-1.jpg','Power BI','Power BI Dashboard','Add a short description'],
+['powerbi-2.jpg','Power BI','Power BI Dashboard','Add a short description'],
+['powerbi-3.jpg','Power BI','Power BI Dashboard','Add a short description'],
+['powerbi-4.jpg','Power BI','Power BI Dashboard','Add a short description'],
+['linkedin-ads-1.jpg','LinkedIn & YouTube Ads','LinkedIn / YouTube Ads','Add a short description'],
+['linkedin-ads-2.jpg','LinkedIn & YouTube Ads','LinkedIn / YouTube Ads','Add a short description'],
+['linkedin-ads-3.jpg','LinkedIn & YouTube Ads','LinkedIn / YouTube Ads','Add a short description'],
+['portfolio-1.jpg','Photos','Rekha','Bengaluru']
+];
+const g=$('#gallery'),fl=$('#filters');let cur='All';
+// each sub-category appears under one or more section tabs
+const TABS={'Meta Ads':['Paid Media','Meta Ads'],'Lead Forms':['Paid Media','Meta Ads'],'Google Ads':['Paid Media','Google Ads'],'LinkedIn & YouTube Ads':['Paid Media'],
+'Search Console':['SEO'],'Local Rankings':['SEO','GMB'],'GMB Profile':['GMB'],'Website':['Web'],'Website Audit':['Web'],
+'Instagram':['Social Media'],'YouTube':['Social Media'],'Facebook':['Social Media'],'Google Analytics':['Analytics'],'Monthly Reports':['Analytics'],
+'Power BI':['Dashboards'],'Creatives':['Creatives'],'Photos':['Photos']};
+const ORDER=['Paid Media','Meta Ads','Google Ads','SEO','GMB','Web','Social Media','Analytics','Dashboards','Creatives','Photos'];
+const ALT={"analytics-1.jpg":["Google-analytics.jpeg"],"analytics-2.jpg":["Google-analytics1.jpeg"],"analytics-5.jpg":["Google-analytics3.jpeg"],"analytics-4.jpg":["Google-analytics2.jpeg"],"analytics-3.jpg":["Google-analytics4.jpeg"],"sc-1.jpg":["Google-seachr-console.jpeg"],"sc-4.jpg":["Google-seachr-console1.jpeg"],"sc-2.jpg":["Google-seachr-console2.jpeg"],"sc-11.jpg":["Google-seachr-console4.jpeg","Google-seachr-console4_1.jpeg"],"sc-10.jpg":["Google-seachr-console5.jpeg","Google-seachr-console5_1.jpeg"],"sc-5.jpg":["Google-seachr-console6.jpeg","Google-seachr-console6_1.jpeg"],"sc-8.jpg":["Google-seachr-console7.jpeg","Google-seachr-console7_1.jpeg"],"sc-7.jpg":["Google-seachr-console8.jpeg"],"sc-9.jpg":["Google-seachr-console9.jpeg"],"sc-3.jpg":["Google-seachr-console10.jpeg"],"gmb-1.jpg":["gmb.jpeg"],"gmb-2.jpg":["gmb1.jpeg"],"sc-6.jpg":["Google-search-console11.jpeg"],"gmb-3.jpg":["gmb2.jpeg"],"gmb-4.jpg":["gmb3.jpeg"],"gmb-5.jpg":["gmb4.jpeg"],"gmb-6.jpg":["gmb5.jpeg"],"gmb-7.jpg":["gmb6.jpeg"],"gmb-8.jpg":["gmb7.jpeg"],"gmb-9.jpg":["gmb8.jpeg"],"gmb-10.jpg":["gmb9.jpeg"],"gmb-11.jpg":["gmb10.jpeg"],"gmb-12.jpg":["gmb11.jpeg"],"gmb-13.jpg":["gmb12.jpeg"],"gmb-14.jpg":["gmb13.jpeg"],"gmb-15.jpg":["gmb14.jpeg"],"gmb-16.jpg":["gmb15.jpeg"],"gmb-17.jpg":["gmb16.jpeg"],"gmb-18.jpg":["gmb17.jpeg"],"gmb-19.jpg":["gmb18.jpeg","gmb18_1.jpeg"],"sc-12.jpg":["Google-search-console12.jpeg"],"sc-13.jpg":["Google-search-console13.jpeg"],"google-ads-1.jpg":["google-ads.jpeg","google-ads_1.jpeg"],"google-ads-2.jpg":["google-ads1.jpeg"],"google-ads-3.jpg":["google-ads2.jpeg"],"google-ads-4.jpg":["google-ads3.jpeg"],"google-ads-5.jpg":["google-ads4.jpeg"],"local-1.jpg":["google-ads5.jpeg","google-ads_e0de9c.jpeg"],"local-2.jpg":["gmb-ranking.jpeg"],"audit-1.jpg":["DAPA.jpeg"],"local-3.jpg":["gmb-ranking1.jpeg"],"local-4.jpg":["gmb-ranking2.jpeg"],"local-5.jpg":["google-ads1_1.jpeg"],"local-6.jpg":["gmb-ranking3.jpeg"],"instagram-1.jpg":["instgram-followers.jpeg"],"local-7.jpg":["gmb-ranking4.jpeg"],"meta-targeting-1.jpg":["meta_ads-location.jpeg"],"meta-targeting-2.jpg":["meta_ads_intrest.jpeg"],"meta-targeting-3.jpg":["meta_ads1.jpeg"],"meta-targeting-4.jpg":["meta_ads_2.jpeg"],"audit-2.jpg":["website-performance.jpeg"],"google-ads-6.jpg":["google_ads.jpeg"],"google-ads-7.jpg":["gogogle-ads-conversion.jpeg"],"audit-3.jpg":["website-performance__2_.jpeg"],"google-ads-8.jpg":["google-ads-k.jpeg"],"gmb-23.jpg":["gmb_1.jpeg"],"gmb-24.jpg":["gmb1_1.jpeg"],"google-ads-9.jpg":["google-ads-conversion-summery.jpeg"],"gmb-21.jpg":["Gmb3.jpeg"],"sc-14.jpg":["google-search-console.jpeg"],"sc-15.jpg":["google-search-console1.jpeg"],"gmb-22.jpg":["gmb5_1.jpeg"],"analytics-6.jpg":["ghoogle-analytics.jpeg"],"analytics-7.jpg":["google-analytics.jpeg"]};
+// tries my file name, then your own file names, then an /images folder
+const probe=f=>{const c=[f,...(ALT[f]||[])];c.push(...c.map(x=>'images/'+x));return c.reduce((p,u)=>p.then(r=>r||new Promise(res=>{const t=new Image();t.onload=()=>res(u);t.onerror=()=>res(null);t.src=u})),Promise.resolve(null))};
+Promise.all(items.map(it=>probe(it[0]))).then(found=>{
+ const list=items.map((it,i)=>({it,src:found[i],tabs:TABS[it[1]]||[it[1]]})).filter(x=>x.src);
+ const rank=x=>Math.min(...x.tabs.map(t=>{const k=ORDER.indexOf(t);return k<0?99:k}));
+ list.sort((a,b)=>rank(a)-rank(b));
+ list.forEach(({it:[f,cat,t,cap],src,tabs})=>{const d=document.createElement('div');d.className='card'+(cat==='Photos'?'':' shot');d.dataset.tabs='|'+tabs.join('|')+'|';
+  d.innerHTML=`<img src="${src}" alt="${t}" loading="lazy"><span class="tag">${cat}</span><div class="cap"><b>${t}</b>${cap}</div>`;
+  d.onclick=()=>{$('#lb img').src=src;$('#lb').classList.add('on')};g.append(d)});
+ buildFilters()});
+function buildFilters(){const have=new Set();$$('#gallery .card').forEach(c=>c.dataset.tabs.split('|').filter(Boolean).forEach(t=>have.add(t)));
+ const cats=['All',...ORDER.filter(t=>have.has(t))];
+ fl.innerHTML='';cats.forEach(c=>{const b=document.createElement('button');b.textContent=c;b.className=c===cur?'on':'';
+  b.onclick=()=>{cur=c;$$('#gallery .card').forEach(x=>x.style.display=(c==='All'||x.dataset.tabs.includes('|'+c+'|'))?'':'none');buildFilters()};fl.append(b)})}
+$$('.case img').forEach(i=>{const f=i.getAttribute('src'),c=[...(ALT[f]||[])];c.push(...c.map(x=>'images/'+x));i.onerror=()=>{const n=c.shift();if(n)i.src=n}});
+$$('.case img').forEach(i=>i.onclick=()=>{$('#lb img').src=i.src;$('#lb').classList.add('on')});
+// fallback if images are inside an /images folder
+$$('img.avatar,.about img,.hero-img').forEach(i=>i.onerror=()=>{if(!i.dataset.r){i.dataset.r=1;i.src='images/'+i.getAttribute('src')}});
+$('#lb').onclick=()=>$('#lb').classList.remove('on');
+// contact form -> opens WhatsApp chat with the message pre-filled
+$('#form').onsubmit=e=>{e.preventDefault();
+ const t=`*New message from your portfolio*\nName: ${$('#n').value}\nEmail: ${$('#e').value}\nSubject: ${$('#s').value}\n\n${$('#m').value}`;
+ window.open('https://wa.me/919164465721?text='+encodeURIComponent(t),'_blank')};
+</script>
+</body>
+</html>
