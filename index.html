@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rekha | Paid Media Specialist &amp; Website Developer</title>
-<meta name="description" content="Rekha – Paid Media Specialist and Website Developer in Bengaluru. Google Ads, Meta Ads, WordPress, SEO, AEO, GEO, Power BI.">
+<title>Rekha | Paid Media Specialist, ERP Developer, HR Operations &amp; Data Analyst</title>
+<meta name="description" content="Rekha – Paid Media Specialist, Website and ERP Developer, HR Operations and Data Analyst in Bengaluru. Google Ads, Meta Ads, WordPress, SEO, Power BI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -43,6 +43,8 @@ section:nth-of-type(even){background:var(--alt)}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .hero-img{width:100%;max-height:82vh;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:18px;border:4px solid rgba(20,157,221,.5);box-shadow:0 20px 60px rgba(0,0,0,.5);justify-self:center;max-width:430px}
 #home p.tag{font-size:clamp(14px,1.8vw,17px);opacity:.85;margin:-6px 0 24px}
+#home p.tag span{display:inline-block;margin-right:14px;padding-right:14px;border-right:1px solid rgba(255,255,255,.35);line-height:1.2;margin-bottom:6px}
+#home p.tag span:last-child{border:0;margin-right:0;padding-right:0}
 /* results strip */
 .results{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:46px;padding-top:34px;border-top:1px solid var(--line)}
 .res{display:flex;gap:14px;align-items:flex-start}
@@ -178,7 +180,7 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
     <div>
     <h2>Rekha</h2>
     <p>I'm <span id="typed"></span></p>
-      <p class="tag">Paid Media Specialist &nbsp;|&nbsp; Website Developer &nbsp;|&nbsp; SEO, AEO &amp; GEO &nbsp;|&nbsp; Power BI</p>
+      <p class="tag"><span>Paid Media Specialist</span><span>Website Developer</span><span>ERP Developer</span><span>HR Operations</span><span>Data Analyst</span></p>
     <a class="btn" href="Resume_Rekha_July.pdf" download><i class="bi bi-download"></i>Download Resume</a>
     <a class="btn ghost" href="#contact">Hire Me</a>
   </div>
@@ -188,12 +190,12 @@ footer{text-align:center;padding:26px;border-top:1px solid var(--line);font-size
 
 <section id="about">
   <div class="wrap">
-    <div class="title"><h2>About</h2><p>Website Development &amp; Digital Marketing Executive based in Bengaluru.</p></div>
+    <div class="title"><h2>About</h2><p>Paid Media Specialist, Website &amp; ERP Developer, HR Operations and Data Analyst based in Bengaluru.</p></div>
     <div class="about">
       <img src="portfolio-1.jpg" alt="Rekha">
       <div>
-        <h3>Paid Media Specialist &amp; Website Developer.</h3>
-        <p class="it">Google Ads · Meta Ads · WordPress · SEO · AEO · GEO · Power BI</p>
+        <h3>Paid Media Specialist, Website &amp; ERP Developer, HR Operations &amp; Data Analyst.</h3>
+        <p class="it">Google Ads · Meta Ads · WordPress · ERP · HR Operations · SEO · AEO · GEO · Power BI</p>
         <ul class="info">
           <li><b>Location:</b>Bengaluru, India</li>
           <li><b>Experience:</b>8+ Years</li>
@@ -363,7 +365,7 @@ const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 $('#toggle').onclick=()=>$('#sidebar').classList.toggle('open');
 $$('nav a').forEach(a=>a.onclick=()=>$('#sidebar').classList.remove('open'));
 // typed roles
-const roles=['Paid Media Specialist','Website Developer','Digital Marketer','SEO & AEO Specialist','Power BI Analyst'];let r=0,c=0,del=false;
+const roles=['Paid Media Specialist','Website Developer','ERP Developer','HR Operations','Data Analyst','Digital Marketer','SEO & AEO Specialist'];let r=0,c=0,del=false;
 (function t(){const w=roles[r];$('#typed').textContent=w.slice(0,c);
  if(!del&&c===w.length){del=true;return setTimeout(t,1400)}
  if(del&&c===0){del=false;r=(r+1)%roles.length}
@@ -396,6 +398,7 @@ const items=[
 ['meta-targeting-4.jpg','Meta Ads','Audience Setup','Locations, age and custom audience settings'],
 ['lead-form-1.jpg','Lead Forms','Lead Form Responses','Qualifying questions (contact details hidden)',1],
 ['lead-form-2.jpg','Lead Forms','Lead Form Responses','Plot-size lead form (contact details hidden)',1],
+['lead-form-3.jpg','Lead Forms','Lead Form Responses','3BHK Bangalore lead, ₹8–12 Lakhs budget (contact details hidden)'],
 ['meta-campaigns.jpg','Meta Ads','Meta Ads Campaign Manager','50 campaigns: Instagram profile visits at about ₹3–4 each plus lead campaigns'],
 ['analytics-3.jpg','Google Analytics','GA4 Traffic by Channel','Jun–Sep 2026: direct, organic, paid and referral'],
 ['analytics-1.jpg','Google Analytics','GA4 Traffic by Channel','Jan–Jun 2026 users and engagement time'],
@@ -512,7 +515,7 @@ const TABS={'Meta Ads':['Paid Media','Meta Ads'],'Lead Forms':['Paid Media','Met
 'Instagram':['Social Media'],'YouTube':['Social Media'],'Facebook':['Social Media'],'Google Analytics':['Analytics'],'Monthly Reports':['Analytics'],
 'Power BI':['Dashboards'],'Creatives':['Creatives'],'Photos':['Photos']};
 const ORDER=['Paid Media','Meta Ads','Google Ads','SEO','GMB','Web','Social Media','Analytics','Dashboards','Creatives','Photos'];
-const ALT={"analytics-1.jpg":["Google-analytics.jpeg"],"analytics-2.jpg":["Google-analytics1.jpeg"],"meta-campaigns.jpg":["Meta-ads.jpeg"],"analytics-5.jpg":["Google-analytics3.jpeg"],"analytics-4.jpg":["Google-analytics2.jpeg"],"analytics-3.jpg":["Google-analytics4.jpeg"],"sc-1.jpg":["Google-seachr-console.jpeg"],"sc-4.jpg":["Google-seachr-console1.jpeg"],"sc-2.jpg":["Google-seachr-console2.jpeg"],"sc-11.jpg":["Google-seachr-console4.jpeg","Google-seachr-console4_1.jpeg"],"sc-10.jpg":["Google-seachr-console5.jpeg","Google-seachr-console5_1.jpeg"],"sc-5.jpg":["Google-seachr-console6.jpeg","Google-seachr-console6_1.jpeg"],"sc-8.jpg":["Google-seachr-console7.jpeg","Google-seachr-console7_1.jpeg"],"sc-7.jpg":["Google-seachr-console8.jpeg"],"sc-9.jpg":["Google-seachr-console9.jpeg"],"sc-3.jpg":["Google-seachr-console10.jpeg"],"gmb-1.jpg":["gmb.jpeg"],"gmb-2.jpg":["gmb1.jpeg"],"sc-6.jpg":["Google-search-console11.jpeg"],"gmb-3.jpg":["gmb2.jpeg"],"gmb-4.jpg":["gmb3.jpeg"],"gmb-5.jpg":["gmb4.jpeg"],"gmb-6.jpg":["gmb5.jpeg"],"gmb-7.jpg":["gmb6.jpeg"],"gmb-8.jpg":["gmb7.jpeg"],"gmb-9.jpg":["gmb8.jpeg"],"gmb-10.jpg":["gmb9.jpeg"],"gmb-11.jpg":["gmb10.jpeg"],"gmb-12.jpg":["gmb11.jpeg"],"gmb-13.jpg":["gmb12.jpeg"],"gmb-14.jpg":["gmb13.jpeg"],"gmb-15.jpg":["gmb14.jpeg"],"gmb-16.jpg":["gmb15.jpeg"],"gmb-17.jpg":["gmb16.jpeg"],"gmb-18.jpg":["gmb17.jpeg"],"work-summary-1.jpg":["monthwise-work-planner.jpeg"],"gmb-19.jpg":["gmb18.jpeg","gmb18_1.jpeg"],"sc-12.jpg":["Google-search-console12.jpeg"],"sc-13.jpg":["Google-search-console13.jpeg"],"google-ads-1.jpg":["google-ads.jpeg","google-ads_1.jpeg"],"google-ads-2.jpg":["google-ads1.jpeg"],"google-ads-3.jpg":["google-ads2.jpeg"],"google-ads-4.jpg":["google-ads3.jpeg"],"google-ads-5.jpg":["google-ads4.jpeg"],"local-1.jpg":["google-ads5.jpeg","google-ads_e0de9c.jpeg"],"local-2.jpg":["gmb-ranking.jpeg"],"audit-1.jpg":["DAPA.jpeg"],"local-3.jpg":["gmb-ranking1.jpeg"],"local-4.jpg":["gmb-ranking2.jpeg"],"local-5.jpg":["google-ads1_1.jpeg"],"local-6.jpg":["gmb-ranking3.jpeg"],"instagram-1.jpg":["instgram-followers.jpeg"],"meta-campaigns-2.jpg":["meta_ads.jpeg"],"local-7.jpg":["gmb-ranking4.jpeg"],"meta-targeting-1.jpg":["meta_ads-location.jpeg"],"meta-targeting-2.jpg":["meta_ads_intrest.jpeg"],"meta-targeting-3.jpg":["meta_ads1.jpeg"],"meta-targeting-4.jpg":["meta_ads_2.jpeg"],"audit-2.jpg":["website-performance.jpeg"],"google-ads-6.jpg":["google_ads.jpeg"],"google-ads-7.jpg":["gogogle-ads-conversion.jpeg"],"audit-3.jpg":["website-performance__2_.jpeg"],"google-ads-8.jpg":["google-ads-k.jpeg"],"gmb-23.jpg":["gmb_1.jpeg"],"gmb-24.jpg":["gmb1_1.jpeg"],"google-ads-9.jpg":["google-ads-conversion-summery.jpeg"],"gmb-21.jpg":["Gmb3.jpeg"],"sc-14.jpg":["google-search-console.jpeg"],"sc-15.jpg":["google-search-console1.jpeg"],"gmb-22.jpg":["gmb5_1.jpeg"],"analytics-6.jpg":["ghoogle-analytics.jpeg"],"analytics-7.jpg":["google-analytics.jpeg"]};
+const ALT={"analytics-1.jpg":["Google-analytics.jpeg"],"analytics-2.jpg":["Google-analytics1.jpeg"],"analytics-5.jpg":["Google-analytics3.jpeg"],"analytics-4.jpg":["Google-analytics2.jpeg"],"analytics-3.jpg":["Google-analytics4.jpeg"],"sc-1.jpg":["Google-seachr-console.jpeg"],"sc-4.jpg":["Google-seachr-console1.jpeg"],"sc-2.jpg":["Google-seachr-console2.jpeg"],"sc-11.jpg":["Google-seachr-console4.jpeg","Google-seachr-console4_1.jpeg"],"sc-10.jpg":["Google-seachr-console5.jpeg","Google-seachr-console5_1.jpeg"],"sc-5.jpg":["Google-seachr-console6.jpeg","Google-seachr-console6_1.jpeg"],"sc-8.jpg":["Google-seachr-console7.jpeg","Google-seachr-console7_1.jpeg"],"sc-7.jpg":["Google-seachr-console8.jpeg"],"sc-9.jpg":["Google-seachr-console9.jpeg"],"sc-3.jpg":["Google-seachr-console10.jpeg"],"gmb-1.jpg":["gmb.jpeg"],"gmb-2.jpg":["gmb1.jpeg"],"sc-6.jpg":["Google-search-console11.jpeg"],"gmb-3.jpg":["gmb2.jpeg"],"gmb-4.jpg":["gmb3.jpeg"],"gmb-5.jpg":["gmb4.jpeg"],"gmb-6.jpg":["gmb5.jpeg"],"gmb-7.jpg":["gmb6.jpeg"],"gmb-8.jpg":["gmb7.jpeg"],"gmb-9.jpg":["gmb8.jpeg"],"gmb-10.jpg":["gmb9.jpeg"],"gmb-11.jpg":["gmb10.jpeg"],"gmb-12.jpg":["gmb11.jpeg"],"gmb-13.jpg":["gmb12.jpeg"],"gmb-14.jpg":["gmb13.jpeg"],"gmb-15.jpg":["gmb14.jpeg"],"gmb-16.jpg":["gmb15.jpeg"],"gmb-17.jpg":["gmb16.jpeg"],"gmb-18.jpg":["gmb17.jpeg"],"gmb-19.jpg":["gmb18.jpeg","gmb18_1.jpeg"],"sc-12.jpg":["Google-search-console12.jpeg"],"sc-13.jpg":["Google-search-console13.jpeg"],"google-ads-1.jpg":["google-ads.jpeg","google-ads_1.jpeg"],"google-ads-2.jpg":["google-ads1.jpeg"],"google-ads-3.jpg":["google-ads2.jpeg"],"google-ads-4.jpg":["google-ads3.jpeg"],"google-ads-5.jpg":["google-ads4.jpeg"],"local-1.jpg":["google-ads5.jpeg","google-ads_e0de9c.jpeg"],"local-2.jpg":["gmb-ranking.jpeg"],"audit-1.jpg":["DAPA.jpeg"],"local-3.jpg":["gmb-ranking1.jpeg"],"local-4.jpg":["gmb-ranking2.jpeg"],"local-5.jpg":["google-ads1_1.jpeg"],"local-6.jpg":["gmb-ranking3.jpeg"],"instagram-1.jpg":["instgram-followers.jpeg"],"local-7.jpg":["gmb-ranking4.jpeg"],"meta-targeting-1.jpg":["meta_ads-location.jpeg"],"meta-targeting-2.jpg":["meta_ads_intrest.jpeg"],"meta-targeting-3.jpg":["meta_ads1.jpeg"],"meta-targeting-4.jpg":["meta_ads_2.jpeg"],"audit-2.jpg":["website-performance.jpeg"],"google-ads-6.jpg":["google_ads.jpeg"],"google-ads-7.jpg":["gogogle-ads-conversion.jpeg"],"audit-3.jpg":["website-performance__2_.jpeg"],"google-ads-8.jpg":["google-ads-k.jpeg"],"gmb-23.jpg":["gmb_1.jpeg"],"gmb-24.jpg":["gmb1_1.jpeg"],"google-ads-9.jpg":["google-ads-conversion-summery.jpeg"],"gmb-21.jpg":["Gmb3.jpeg"],"sc-14.jpg":["google-search-console.jpeg"],"sc-15.jpg":["google-search-console1.jpeg"],"gmb-22.jpg":["gmb5_1.jpeg"],"analytics-6.jpg":["ghoogle-analytics.jpeg"],"analytics-7.jpg":["google-analytics.jpeg"]};
 // tries my file name, then your own file names, then an /images folder
 const probe=f=>{const c=[f,...(ALT[f]||[])];c.push(...c.map(x=>'images/'+x));return c.reduce((p,u)=>p.then(r=>r||new Promise(res=>{const t=new Image();t.onload=()=>res(u);t.onerror=()=>res(null);t.src=u})),Promise.resolve(null))};
 Promise.all(items.map(it=>probe(it[0]))).then(found=>{
